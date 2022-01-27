@@ -25,6 +25,15 @@ void straight(int a, int b) {
     cout << " ";
     for (int i = 0; i < b; i++)
         cout << "-";
+    cout << endl;
+}
+
+int fact(int N) {
+    if (N == 0)
+        return 0;
+    if (N == 1)
+        return 1;
+    return N * fact(N - 1);
 }
 
 
@@ -36,5 +45,10 @@ int main()
     cout << "¬ведите высоту и ширину пр€моугольника: " << endl;
     cin >> N >> K;
     straight(N, K);
+
+    int a;
+    cin >> a;
+    cout << fact(a);
+
     return 0;
 }
